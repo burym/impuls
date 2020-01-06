@@ -1,0 +1,98 @@
+
+<div class="mess-box">
+  <span class="popup-close"></span>
+  <div class="mess-header">
+      <h5>Мои сообщения</h5>
+      <p>У вас 6 непрочитанных сообщений</p>
+  </div>
+
+  <div class="mess-row" id="mess15">
+    <div class="mess-person">
+      <img src="img/temp/mess-person1.jpg" alt="" />
+      <a href="#" title="" data-usermess="1102" ><span>Анна Николина</span></a>
+      <span class="online">Сейчас в сети</span>
+      <time>Вчера в 09:15</time>
+    </div>
+    <div class="mess-body">
+      <a href="#" title="" class="mess-delete click-cur" data-messid="15" >&times;</a>
+      Добрый день, когда Вы собираетесь оганизовать корпоратив в Московской области?
+    </div>
+  </div>
+
+  <div class="mess-row gray" id="mess75">
+    <div class="mess-person">
+      <img src="img/temp/mess-person2.jpg" alt="" />
+      <a href="#" title="" data-usermess="1104"><span>Сергей Варушин</span></a>
+      <time>20 сентября в 16:40</time>
+    </div>
+    <div class="mess-body">
+      <a href="#" title="" class="mess-delete click-cur" data-messid="75" >&times;</a>
+        Знаете что! Мы точно будем присутствовать на вашем замечательном мероприятии со всей командой IT отдела
+        <p>Тут вообще длинный текст в разных тегах</p>
+        <p>При этом он не упоминает, что Motorola уже пережила крах и превратилась из лидера рынка в одного из производителей, которых обычно в аналитических отчетах записывают в пункт «остальные». С другой стороны, компания теперь принадлежит Lenovo, и китайцы уверены в радужных перспективах для своего нового структурного подразделения — Motorola может стать прибыльной уже через год-полтора, говорится в первом совместном финансовом отчете компаний.</p>
+    </div>
+  </div>
+
+  <div class="mess-row" id="mess94">
+    <div class="mess-person">
+      <img src="img/temp/mess-person3.jpg" alt="" />
+      <a href="#" title="" data-usermess="1106"><span>Инга Воробьянинова</span></a>
+      <time>12 сентября в 11:30</time>
+    </div>
+    <div class="mess-body">
+      <a href="#" title="" class="mess-delete click-cur" data-messid="94" >&times;</a>
+      Инга, обязатеьлно приезжайте к нам в офис Петрово Дальнее в пятницу!
+    </div>
+  </div>
+
+</div>
+
+<div class="delete-dlg">
+  <strong>Удалить диалог</strong>
+  <p></p>
+  <div>
+    <a href="#" title="" onclick="doMessDelete();" >Да</a>
+    <a href="#" title="" onclick="$('.delete-dlg').hide(); messDelete = false; return false;">Нет</a>
+  </div>
+</div>
+
+<script type="text/javascript">
+// <![CDATA[
+
+  var messDelete = false;
+
+  $('#dlgOverlap, .popup-close').on('click', function(){
+    $('#dlgOverlap').hide();
+    $('.popup').hide();
+  });
+
+  $('.mess-person a').on('click', function(){
+    var messUser = $(this).data('usermess');
+    alert('здесь, возможно, как-то открывается переписка с пользователем ID='+messUser+',\n или форма сообщения ему');
+    return false;
+  });
+
+  $('.mess-body .mess-delete').on('click', function(){
+    messDelete = $(this).data('messid');
+    var thOffset = $(this).offset();
+    var userTitle = $(this).closest('.mess-row').find('.mess-person a span').text();
+    $('.delete-dlg p').text('Переписка с '+userTitle+' будет удалена.');
+    $('.delete-dlg').show().center();
+    $('.delete-dlg').css('top', (thOffset.top -35)+'px' );
+    $(document).one('click', function(){
+      $('.delete-dlg').hide();
+    });
+    return false;
+  });
+
+  function doMessDelete(){
+    alert('Удаляем переписку ID = '+messDelete);
+    $('#mess'+messDelete).remove();
+   // $('.mess-box').center();
+    return false;
+  }
+
+// ]]>
+</script>
+
+

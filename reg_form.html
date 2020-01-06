@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+	<title>Импульс :: Регистрация</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="css/jquery.formstyler.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="wrapper reg-page"> <!-- reg-page убирает темную колонку слева -->
+
+	<header>
+		<div class="logo-div"><a href="index.html" title="">Корпоративный сайт</a> </div>
+    <nav>
+      <ul>
+        <li><a href="subdivisions.html" title=""><img src="img/menu_ico_1.png" alt="" /> <span>подразделения</span></a></li>
+        <li><a href="actions.html" title=""><img src="img/menu_ico_2.png" alt="" /><span>мероприятия</span></a></li>
+        <li><a href="advice.html" title=""><img src="img/menu_ico_3.png" alt="" /><span>наблюдательный совет</span></a></li>
+        <li><a href="groups.html" title=""><img src="img/menu_ico_4.png" alt="" /><span>группы</span></a></li>
+        <li><a href="education.html" title=""><img src="img/menu_ico_5.png" alt="" /><span>обучение</span></a></li>
+        <li><a href="board.html" title=""><img src="img/menu_ico_6.png" alt="" /><span>доска почета</span></a></li>
+      </ul>
+    </nav>
+    <a href="#" title="" class="find-link click-cur"></a>
+    <div class="search-row">
+      <form action="/" method="get" id="top-search" accept-charset="utf-8" autocomplete="off" >
+        <label>Поиск</label>
+        <input type="text" name="q" required="required" placeholder="Введите слово для поиска" />
+        <button type="submit">Найти</button>
+      </form>
+    </div>
+	</header><!-- .header-->
+
+	<div class="middle">
+
+		<div class="container main-wrap">
+			<main class="content">
+				<h1>Регистрация</h1>
+        <p class="pre-content">Данный шаг вам даст ряд преимущества для работы в компании</p>
+
+          <form action="/" method="post" accept-charset="utf-8" autocomplete="off" class="form left-label" id="reg-form" >
+
+
+              <div class="input-wrap">
+                <label>ФИО</label>
+                <input type="text" name="name1" placeholder="Представьтесь, пожалуйста" />
+                <output class="err"></output>
+              </div>
+              <div class="input-wrap">
+                <label>Дата рождения</label>
+                <select name="births_day" data-placeholder="День">
+                  <option></option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                </select>
+
+                <select name="births_month"  data-placeholder="Месяц">
+                  <option></option>
+                  <option value="01">январь</option>
+                  <option value="02">февраль</option>
+                  <option value="03">март</option>
+                </select>
+
+                <select name="births_year" data-placeholder="Год">
+                  <option></option>
+                  <option value="1901">1901</option>
+                  <option value="1902">1902</option>
+                  <option value="1903">1903</option>
+                </select>
+
+                <output class="err"></output>
+              </div>
+              <div class="input-wrap">
+                <label>Должность</label>
+                <input type="text" name="name2" placeholder="Укажите занимаемую должность" />
+                <output class="err"></output>
+              </div>
+              <div class="input-wrap">
+                <label>Подразделение</label>
+                <select name="departament"  data-placeholder="Выберите">
+                  <option></option>
+                  <option value="val1">лаборатория</option>
+                  <option value="val2">склад</option>
+                  <option value="val3">бухгалтерия</option>
+                </select>
+                <output class="err"></output>
+              </div>
+              <div class="input-wrap">
+                <label>Город</label>
+                <input type="text" name="city" placeholder="Введите" />
+                <output class="err"></output>
+              </div>
+
+            <div class="submit-div"><button type="submit">Регистрация</button> </div>
+          </form>
+
+			</main><!-- .content -->
+		</div><!-- .container-->
+
+	<!--	<aside class="left-sidebar">
+
+
+
+		</aside> .left-sidebar -->
+
+	</div><!-- .middle-->
+
+</div><!-- .wrapper -->
+
+<footer>
+	<div class="copyr">&copy; Группа компаний «Импульс», 2012</div>
+  <div class="links">
+    <a href="login_form.html" title=""><span>Авторизация</span></a>
+    <a href="#" title=""><span>Написать директору</span></a>
+    <a href="#" title=""><span>Написать ППКО</span></a>
+  </div>
+</footer><!-- .footer -->
+
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
+    <script src="js/ios-orientationchange-fix.min.js" type="text/javascript" ></script>
+    <script src="js/jquery.formstyler.js" type="text/javascript" ></script>
+    <script src="js/script.js" type="text/javascript" ></script>
+
+</body>
+</html>
